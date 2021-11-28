@@ -3,12 +3,35 @@
 % ps2pdf -dALLOWPSTRANSPARENCY main_first.ps
 
 \documentclass{article}
-\usepackage{pstricks,pst-plot,pst-math,graphicx}
+\usepackage{graphicx,pstricks,pst-plot,pst-math}
+
+
+
+\title{Pre-Calculus}
+\author{\emph{Content}\\Sarah Eichorn \qquad Rachel Lehman\\University of California, Irvine
+\and \emph{Document}\\Tim Gudlewski, University at Albany, SUNY}
+\date{2021}
 
 \begin{document}
+\maketitle
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\section{Trigonometry}
+\subsection{Coterminal Angles}
+\subsubsection{Find an angle between $0$ and $2\pi$ that is coterminal with
+$\theta = -\frac{11\pi}{6}$.}
+\begin{itemize}
+  \item Two angles are coterminal if their starting and ending sides are the same.
+  \item An angle is in standard position when its initial side is on the positive $x$-axis.
+  \item For negative angles, rotate clockwise.
+  \item $-2\pi = -\frac{12\pi}{6}$, therefore we're $\frac{\pi}{6}$ short.
+  \item The coterminal angle is $\frac{\pi}{6}$
+\end{itemize}
 \begin{figure}[h]
-    \centering
-    \input{first.tex}
-    \caption{caption}
+  \centering
+  \input{first.tex}
+  \caption{Coterminal angles in radians}
 \end{figure}
 \end{document}
