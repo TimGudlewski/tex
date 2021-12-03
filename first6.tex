@@ -1,0 +1,20 @@
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+  \psaxes[ticks=none,labels=none]{<->}(0,0)(-2.5,-2.5)(2.5,2.5)[$x$,90][$y$,0]
+  \psarc[linecolor=red]{->}(0,0){1}{0}{!PI 0.6666 mul RadToDeg}  % 2pi/3
+  \psarc[linecolor=green,linestyle=dotted]{->}(0,0){1}{0}{!PI 0.3333 mul RadToDeg}  % pi/3
+  \psarc[linecolor=blue,linestyle=dashed]{->}(0,0){2}{0}{!PI RadToDeg}
+  \psarc[linecolor=purple,linestyle=dotted]{->}(0,0){2}{0}{!PI 2 mul RadToDeg}
+  \SpecialCoor
+  \psline[linecolor=red]{->}(2.5;0)
+  \psline[linecolor=red]{->}(2.5;120)
+  \psline[linecolor=blue,linestyle=dashed]{->}(2.5;0)
+  \psline[linecolor=blue,linestyle=dashed]{->}(2.5;180)
+  \psline[linecolor=purple,linestyle=dotted]{->}(2.5;0)
+  \psline[linecolor=purple,linestyle=dotted]{->}(2.5;360)
+  \psline[linecolor=green,linestyle=dotted]{->}(2.5;0)
+  \psline[linecolor=green,linestyle=dotted]{->}(2.5;60)
+  \uput[105](1;105){\color{red}$\frac{2\pi}{3}$}
+  \uput[45](1;45){\color{green}$\frac{\pi}{3}$}
+  \uput[135](2;180){\color{blue}$\pi$}
+  \uput[-45](2;0){\color{purple}$2\pi$}
+\end{pspicture}

@@ -1,0 +1,7 @@
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+  \psaxes[ticks=none,labels=none]{<->}(0,0)(-2.5,-2.5)(2.5,2.5)[$x$,90][$y$,0]
+  \psarcn[linecolor=red]{->}(0,0){1}{0}{!PI 1.25 mul neg RadToDeg}  % -5pi/4
+  \psline[linecolor=red]{->}(2.5;0)
+  \psline[linecolor=red]{->}(2.5;-225)
+  \uput[-200](1;-200){\color{red}$-\frac{5\pi}{4}$}
+\end{pspicture}

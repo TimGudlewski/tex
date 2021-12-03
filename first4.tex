@@ -1,0 +1,14 @@
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+  \psaxes[ticks=none,labels=none]{<->}(0,0)(-2.5,-2.5)(2.5,2.5)[$x$,90][$y$,0]
+  \psarcn[linecolor=red]{->}(0,0){1}{0}{-156}
+  \SUBTRACT{180}{156}{\tempA}
+  \ADD{180}{\tempA}{\tempB}
+  \psarc[linecolor=blue,linestyle=dashed](0,0){1}{180}{\tempB}
+  \SpecialCoor
+  \psline[linecolor=red]{->}(2.5;-156)
+  \psline[linecolor=red]{->}(2.5;0)
+  \psline[linecolor=blue,linestyle=dashed]{->}(2.5;\tempB)
+  \psline[linecolor=blue,linestyle=dashed]{->}(2.5;180)
+  \uput[-60](1;-60){\color{red}$-156\degree$}
+  \uput[192](1;192){\color{blue}(ref. angle) $\tempA\degree$}
+\end{pspicture}

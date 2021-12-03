@@ -8,3 +8,6 @@
 *.bak
 tmp.inputs
 *.toc
+*.fdb_latexmk
+*.fls
+*.out

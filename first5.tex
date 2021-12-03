@@ -1,0 +1,12 @@
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+  \psaxes[ticks=none,labels=none]{<->}(0,0)(-2.5,-2.5)(2.5,2.5)[$x$,90][$y$,0]
+  \psarc[linecolor=red]{->}(0,0){1}{0}{!PI 1.8888 mul RadToDeg}  % 17pi/9
+  \psarcn[linecolor=blue,linestyle=dashed](0,0){1}{0}{!PI 0.1111 mul neg RadToDeg}
+  \SpecialCoor
+  \psline[linecolor=red]{->}(2.5;0)
+  \psline[linecolor=red]{->}(2.5;340)
+  \psline[linecolor=blue,linestyle=dashed]{->}(2.5;340)
+  \psline[linecolor=blue,linestyle=dashed]{->}(2.5;360)
+  \uput[225](1;225){\color{red}$\frac{17\pi}{9}$}
+  \uput{0.5}[350](1;350){\color{blue}$\frac{\pi}{9}$ (ref. angle)}
+\end{pspicture}

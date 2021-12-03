@@ -1,11 +1,12 @@
-% latex main_first.tex
+% latexmk -dvi main_first.tex
 % dvips main_first.dvi
 % ps2pdf -dALLOWPSTRANSPARENCY main_first.ps
 
 \documentclass{article}
-\usepackage{graphicx,pstricks,pst-plot,pst-math}
-
-
+\usepackage{float,paracol,gensymb,amssymb,graphicx,calculator,pstricks,pst-plot,pst-math}
+\usepackage[margin=1in,a4paper,landscape]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{linktoc=all}
 
 \title{Pre-Calculus}
 \author{\emph{Content}\\Sarah Eichorn \qquad Rachel Lehman\\University of California, Irvine
@@ -17,21 +18,123 @@
 \setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{2}
 \tableofcontents
-
+\newpage
 \section{Trigonometry}
+\newpage
+
+\begin{paracol}{2}
 \subsection{Coterminal Angles}
-\subsubsection{Find an angle between $0$ and $2\pi$ that is coterminal with
+\subsubsection{Example 1: Find an angle between $0$ and $2\pi$ that is coterminal with
 $\theta = -\frac{11\pi}{6}$.}
 \begin{itemize}
   \item Two angles are coterminal if their starting and ending sides are the same.
   \item An angle is in standard position when its initial side is on the positive $x$-axis.
   \item For negative angles, rotate clockwise.
   \item $-2\pi = -\frac{12\pi}{6}$, therefore we're $\frac{\pi}{6}$ short.
-  \item The coterminal angle is $\frac{\pi}{6}$
+  \item $-\frac{11\pi}{6}+2\pi = \frac{\pi}{6}$
+  \item \textbf{Answer:} The coterminal angle is $\frac{\pi}{6}$
 \end{itemize}
-\begin{figure}[h]
+\switchcolumn
+\begin{figure}[H]
   \centering
   \input{first.tex}
   \caption{Coterminal angles in radians}
 \end{figure}
+\switchcolumn*
+
+\subsubsection{Example 2: Let $\theta = 600\degree$.\\a) Find an angle between $0\degree$ and $360\degree$
+that is coterminal with $\theta$.\\b) Find an angle between $0\degree$ and $-360\degree$
+that is coterminal with $\theta$.}
+\begin{itemize}
+  \item $360\degree+180\degree = 540\degree$
+  \item $540\degree+60\degree = 600\degree$
+  \item $180\degree+60\degree = 240\degree$
+  \item \textbf{Answer a):} $240\degree$
+  \item $180\degree-60\degree = 120\degree$
+  \item \textbf{Answer b):} $120\degree$
+\end{itemize}\switchcolumn
+\begin{figure}[H]
+  \centering
+  \input{first2.tex}
+  \caption{Coterminal angles in degrees}
+\end{figure}
+\switchcolumn
+\flushpage
+
+\subsection{Reference Angles}
+\subsubsection{Example 1: Find the reference angle for $\theta = \frac{5\pi}{6}$.}
+\begin{itemize}
+  \item The reference angle is the acute positive angle formed by the terminal
+  side of $\theta$ and the $x$-axis.
+  \item Reference angle = $\pi-\frac{5\pi}{6} = \frac{\pi}{6}$
+  \item \textbf{Answer:} $\frac{\pi}{6}$
+\end{itemize}\switchcolumn
+\begin{figure}[H]
+  \centering
+  \input{first3.tex}
+  \caption{Reference angle in radians}
+\end{figure}\switchcolumn*
+\subsubsection{Example 2: Find the reference angle for $\theta = -156\degree$.}
+\begin{itemize}
+  \item Reference angle = $180\degree-156\degree = 24\degree$
+  \item \textbf{Answer:} $24\degree$
+\end{itemize}
+\switchcolumn
+\begin{figure}[H]
+  \centering
+  \input{first4.tex}
+  \caption{Reference angle in degrees}
+\end{figure}
+\switchcolumn
+\flushpage
+\subsubsection{Example 3: Find the reference angle for $\theta = \frac{17\pi}{9}$.}
+\begin{itemize}
+  \item Reference angle = $2\pi-\frac{17\pi}{9} = \frac{\pi}{9}$
+  \item \textbf{Answer:} $\frac{\pi}{9}$
+\end{itemize}
+\switchcolumn
+\begin{figure}[H]
+  \centering
+  \input{first5.tex}
+  \caption{Reference angle in radians}
+\end{figure}
+\switchcolumn
+\flushpage
+
+\subsection{Sketching an Angle in Standard Position}
+\subsubsection{Example 1: Sketch $\theta = \frac{2\pi}{3}$ in standard position.}
+\begin{itemize}
+  \item An angle is in standard position if its initial side is on the positive $x$-axis.
+  \item If $\theta>0$, rotate counter-clockwise. If $\theta<0$, rotate clockwise.
+  \item One complete rotation measures $2\pi$ radians.
+  \begin{itemize}
+    \item The radian measure of an angle is defined as the length of the corresponding arc on the unit circle.
+    \item Since the circumference of the unit circle is $2\pi$, then the radian measure of one complete revolution is $2\pi$.
+    \item $\therefore$ half a rotation would measure $\pi$ radians.
+  \end{itemize}
+  \item If $\pi$ is split into thirds, $\frac{2\pi}{3}$ would span two of them.
+\end{itemize}
+\switchcolumn
+\begin{figure}[H]
+  \centering
+  \input{first6.tex}
+  \caption{$\theta$ in standard position}
+\end{figure}\switchcolumn*
+\subsubsection{Example 2: Sketch $\theta = -\frac{5\pi}{4}$ in standard position.}
+\begin{itemize}
+  \item If $-2\pi$ is split into fourths, $-\frac{5\pi}{4}$ would span five of them going clockwise.
+\end{itemize}
+\switchcolumn
+\begin{figure}[H]
+  \centering
+  \input{first7.tex}
+  \caption{$\theta$ in standard position (negative)}
+\end{figure}
+
+
+
+
+
+
+\end{paracol}
 \end{document}

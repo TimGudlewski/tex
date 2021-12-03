@@ -1,0 +1,22 @@
+\begin{pspicture}(-3,-3)(3,3)
+  \psaxes[ticks=none,labels=none]{<->}(0,0)(-3,-3)(3,3)
+  \psarc[linecolor=red]{->}(0,0){1}{0}{360}
+  \psarc[linecolor=red]{->}(0,0){1.5}{360}{540}
+  \psarc[linecolor=red]{->}(0,0){1.5}{540}{600}
+  \psarc[linecolor=blue,linestyle=dashed]{->}(0,0){2.5}{0}{180}
+  \psarc[linecolor=blue,linestyle=dashed]{->}(0,0){2.5}{180}{240}
+  \psarcn[linecolor=green,linestyle=dotted]{->}(0,0){2.5}{0}{-120}
+  \SpecialCoor
+  \psline[linecolor=red]{->}(3;0)
+  \psline[linecolor=red]{->}(3;600)
+  \psline[linestyle=dashed,linecolor=blue]{->}(3;0)
+  \psline[linestyle=dashed,linecolor=blue]{->}(3;240)
+  \psline[linestyle=dotted,linecolor=green]{->}(3;0)
+  \psline[linestyle=dotted,linecolor=green]{->}(3;-120)
+  \uput{0.1}[225](1,0){\color{red}$360\degree$}
+  \uput{0.1}[130](-1.5,0){\color{red}$540\degree$}
+  \uput{0.1}[130](-2.5,0){\color{blue}$180\degree$}
+  \uput{0.25}[180](1.5;240){\color{red}$600\degree$}
+  \uput{0.25}[180](2.5;240){\color{blue}$240\degree$}
+  \uput[-60](2.5;-45){\color{green}$-120\degree$}
+\end{pspicture}
